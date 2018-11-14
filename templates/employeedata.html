@@ -1,0 +1,30 @@
+{% extends 'layouts.html' %}
+{% block myContent %}
+    <h3>Employee List</h3>
+    
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Age</th>
+                <th scope="col">Salary</th>
+            </tr>
+        </thead>
+        {% for emp in myEmp %}
+            
+        <tbody>
+            <tr>
+                <td>{{emp.id}}</th>
+                <td>{{emp.name}}</td>
+                <td>{{emp.age}}</td>
+                <td>{{emp.salary}}</td>
+            </tr>
+        </tbody>
+        {% endfor %}
+
+
+    </table>
+
+    
+{% endblock %}
